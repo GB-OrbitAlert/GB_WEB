@@ -1,13 +1,13 @@
 const THEME_KEY = 'orbit-theme';
 
-function applyTheme(theme) {
+function applyTheme(tema) {
     const root = document.documentElement;
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    root.setAttribute('data-theme', theme === 'system' ? (systemDark ? 'dark' : 'light') : theme);
+    root.setAttribute('data-theme', tema === 'system' ? (systemDark ? 'dark' : 'light') : tema);
 
-    document.querySelectorAll('.theme-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.themeValue === theme);
+    document.querySelectorAll('.btn-tema').forEach (btn => {
+        btn.classList.toggle('active', btn.dataset.themeValue === tema);
     });
 }
 
@@ -21,11 +21,11 @@ function initTheme() {
         }
     });
 
-    document.querySelectorAll('.theme-btn').forEach(btn => {
+    document.querySelectorAll('.btn-tema').forEach (btn => {
         btn.addEventListener('click', () => {
-            const theme = btn.dataset.themeValue;
-            localStorage.setItem(THEME_KEY, theme);
-            applyTheme(theme);
+            const tema = btn.dataset.themeValue;
+            localStorage.setItem(THEME_KEY, tema);
+            applyTheme(tema);
         });
     });
 }
