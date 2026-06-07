@@ -11,9 +11,42 @@
 .header .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 80px;
-    gap: 250px;
+    gap: 24px;
+}
+
+.theme-toggle {
+    display: flex;
+    gap: 4px;
+    background-color: var(--neutral-card);
+    border-radius: var(--radius-curvo);
+    padding: 4px;
+}
+
+.theme-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-text);
+    font-size: 18px;
+    transition: background var(--t-base), color var(--t-base);
+}
+
+.theme-btn.active {
+    background-color: var(--neutral);
+    color: var(--secondary);
+    box-shadow: var(--shadow-menor);
+}
+
+.theme-btn:hover:not(.active) {
+    color: var(--secondary);
 }
 
 .box {
@@ -143,17 +176,17 @@
     text-align: center;
 }
 
-.sec-header {
+.tec-header {
     text-align: center;
 }
 
-.sec-header h2 {
+.tec-header h2 {
     font-size: var(--fs-2xl);
     font-family: var(--font-title);
     color: var(--primary);
 }
 
-.sec-header p {
+.tec-header p {
     margin-top: 20px;
     font-size: var(--fs-xl);
     font-family: var(--font-text);
