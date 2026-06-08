@@ -252,6 +252,50 @@ function initQuiz() {
 
     quizRenderizarPergunta();
 }
+function initContatoForm() {
+    const form = document.getElementById('contato-form');
+    if (!form) return;
+
+    const campos = [
+        {
+            input: document.getElementById('contato-nome'),
+            erro: document.getElementById('erro-nome'),
+            mensagem: 'Por favor, informe seu nome.'
+        },
+        {
+            input: document.getElementById('contato-email'),
+            erro: document.getElementById('erro-email'),
+            mensagem: 'Por favor, informe um e-mail válido.'
+        },
+        {
+            input: document.getElementById('contato-mensagem'),
+            erro: document.getElementById('erro-mensagem'),
+            mensagem: 'Por favor, escreva sua mensagem.'
+        }
+    ];
+
+    function validarCampo(campo) {
+        const valor = campo.input.value.trim();
+        let valido = valor.length > 0;
+
+        if (valido && campo.input.type === 'email') {
+            valido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
+        }
+
+        campo.input.classList.toggle('invalido', !valido);
+        campo.erro.textContent = valido ? '' : campo.mensagem;
+
+        return valido;
+    }
+
+    campos.forEach(campo => {
+        campo.input.addEventListener('input', () => {
+            if (campo.input.classList.contains('invalido')) {
+                validarCampo(campo);
+            }
+        });
+    });
+}
 
 document.addEventListener('DOMContentLoaded', initTheme);
 document.addEventListener('DOMContentLoaded', initQuiz);
