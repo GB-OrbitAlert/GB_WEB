@@ -42,53 +42,85 @@ const quizPerguntas = [
         correta: 0
     },
     {
-        pergunta: 'Em 2024, quantas pessoas morreram no RS mesmo após 26 alertas terem sido emitidos?',
-        opcoes: ['84', '184', '284', '14'],
-        correta: 1
-    },
-    {
-        pergunta: 'Segundo o projeto, quantos brasileiros vivem sem cobertura celular?',
-        opcoes: ['Mais de 1 milhão', 'Mais de 5 milhões', 'Mais de 14 milhões', 'Mais de 30 milhões'],
-        correta: 2
-    },
-    {
-        pergunta: 'Quais APIs de satélites gratuitas o OrbitAlert utiliza para captar dados em tempo real?',
+        pergunta: 'Quais tipos de desastres naturais o OrbitAlert monitora?',
         opcoes: [
-            'Google Maps, Waze e OpenStreetMap',
-            'NASA FIRMS, INPE e Copernicus',
-            'AWS, Azure e Google Cloud',
-            'SpaceX, Starlink e OneWeb'
-        ],
+            'Terremotos e tsunamis', 
+            'Enchentes e queimadas', 
+            'Furacões e tornados', 
+            'Avalanches e erupções vulcânicas'],
         correta: 1
     },
     {
-        pergunta: 'Em qual linguagem é desenvolvido o backend que processa os dados de satélite?',
-        opcoes: ['JavaScript', 'Java', 'Python', 'C++'],
+        pergunta: 'O OrbitAlert depende de qual tipo de infraestrutura?',
+        opcoes: [
+            'Internet banda larga e celular', 
+            'Torres de telecomunicação e 5G', 
+            'Nenhuma - opera com rádio e energia solar autônoma', 
+            'Rede de fibra óptica subterrânea'],
         correta: 2
+    },
+    {
+        pergunta: 'Quem pode instalar o sistema do OrbitAlert em uma comunidade?',
+        opcoes: [
+            'Apenas engenheiros certificados',
+            'Somente técnicos da Defesa Civil',
+            'Qualquer professor ou líder comunitário',
+            'Exclusivamente funcionários da NASA'
+        ],
+        correta: 2
+    },
+    {
+        pergunta: 'Qual grupo de público-alvo abriga a unidade receptora como ponto de aviso?',
+        opcoes: [
+            'Escolas particulares', 
+            'Comunidades e postos de saúde', 
+            'Aeroportos regionais', 
+            'Estações de metrô'],
+        correta: 1
     },
     {
         pergunta: 'Qual a distância máxima de comunicação via rádio entre o transmissor e o receptor?',
-        opcoes: ['5 km', '10 km', '15 km', '30 km'],
+        opcoes: [
+            '5 km', 
+            '10 km', 
+            '15 km', 
+            '30 km'],
         correta: 2
     },
     {
         pergunta: 'Qual o custo estimado para instalar o sistema em uma comunidade?',
-        opcoes: ['R$ 100', 'R$ 340', 'R$ 1.000', 'R$ 5.000'],
+        opcoes: [
+            'R$ 100', 
+            'R$ 340', 
+            'R$ 1.000', 
+            'R$ 5.000'],
         correta: 1
     },
     {
         pergunta: 'Em quanto tempo o sistema emite alertas físicos e sonoros após detectar um risco?',
-        opcoes: ['Em até 30 segundos', 'Em até 10 segundos', 'Em menos de 2 segundos', 'Em até 1 minuto'],
+        opcoes: [
+            'Em até 30 segundos', 
+            'Em até 10 segundos', 
+            'Em menos de 2 segundos', 
+            'Em até 1 minuto'],
         correta: 2
     },
     {
         pergunta: 'Quanto tempo leva para instalar o sistema, segundo o projeto?',
-        opcoes: ['30 minutos', '2 horas', '1 dia inteiro', 'Uma semana'],
+        opcoes: [
+            '30 minutos', 
+            '2 horas', 
+            '1 dia inteiro', 
+            'Uma semana'],
         correta: 1
     },
     {
-        pergunta: 'Cerca de quantas pessoas em comunidades indígenas vivem sem sistemas físicos de alerta?',
-        opcoes: ['50 mil', '100 mil', '500 mil', '1 milhão'],
+        pergunta: 'Como os dispositivos do OrbitAlert se comunicam entre si?',
+        opcoes: [
+            'Via rede Wi-Fi local', 
+            'Via Bluetooth de longo alcance', 
+            'Via comunicação por rádio', 
+            'Via conexão por satélite Starlink'],
         correta: 2
     }
 ];
