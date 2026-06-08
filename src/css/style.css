@@ -435,7 +435,51 @@
     display: grid;
     place-items: center;
 }
-
+.contato {
+    padding: var(--section-padY) 0;
+}
+.contato-header {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 40px;
+}
+.contato-header h2 {
+    font-size: var(--fs-2xl);
+    font-family: var(--font-title);
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+.contato-header p {
+    font-size: var(--fs-base);
+    font-family: var(--font-text);
+    color: var(--neutral-text);
+}
+.contato-form {
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--neutral-card);
+    border: 1px solid var(--neutral-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-medio);
+    padding: 36px;
+}
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-grupo label {
+    font-size: var(--fs-sm);
+    font-family: var(--font-title);
+    font-weight: 600;
+    color: var(--primary);
+}
+.contato-form .btn {
+    align-self: flex-start;
+}
 .quiz {
     padding: var(--section-padY) 0;
     background-color: var(--background);
