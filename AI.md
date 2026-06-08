@@ -1,4 +1,6 @@
-## PERGUNTA
+
+
+## 1)  PERGUNTA
 Faça 20 perguntas para um quiz sobre o projeto.
 
 ## RESPOSTA
@@ -143,4 +145,28 @@ b) Comunidades ribeirinhas ✅
 c) Moradores de grandes centros urbanos
 d) Agricultores do agronegócio
 
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+## 2) PERGUNTA
+Através desse arquivo, faça duas imagens sobre o tema e mande apenas as imagens aqui. Troque os arduinos por ESP-32, troque tambem o display lcd 16x2 por um display tft st7789v
+
+
+## RESPOSTA
+
+<img src="src/img/imagem2.png"> <!--imagem2.png-->
+
+-----------------------------------------------------------------------------------
+
+## 3) PERGUNTA
+
+Faça uma imagem mostrando as características do projeto:
+- R$ 340 reais por comunidade
+- 2 segundos de tempo de resposta
+- Alcance máximo de 15 km do sistema
+- Não precisa de nenhum tipo de sinal Wi-Fi, utiliza sinal de rádio
+
+## RESPOSTA
+
+<img src="src/img/imagem3.png"> <!--imagem3.png-->
+
+-- A IMAGEM 1 JÁ ESTAVA NO PROJETO DE FRONT -- 
