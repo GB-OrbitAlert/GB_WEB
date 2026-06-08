@@ -124,6 +124,128 @@
     min-width: 0;
 }
 
+.slideshow {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.slideshow .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    cursor: zoom-in;
+    transition: opacity var(--t-base);
+}
+
+.slideshow .slide.primeiro {
+    opacity: 1;
+}
+
+.slide-pontos {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.slide-ponto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--t-rapida), transform var(--t-rapida);
+}
+
+.slide-ponto.primeiro {
+    background-color: var(--neutral);
+    transform: scale(1.2);
+}
+
+.slide-controles {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.slide-seta {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--neutral-border);
+    border-radius: 50%;
+    background-color: var(--neutral-card);
+    color: var(--primary);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--t-rapida), color var(--t-rapida), border-color var(--t-rapida);
+}
+
+.slide-seta:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--neutral);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--t-base), visibility var(--t-base);
+}
+
+.lightbox.is-aberta {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-imagem {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: var(--radius-menor);
+    box-shadow: var(--shadow-grande);
+    cursor: zoom-out;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--neutral);
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--t-rapida);
+}
+
+.lightbox-fechar:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 .imagem-hero img {
     width: 100%;
     height: auto;
