@@ -104,12 +104,12 @@ function quizElementos() {
         opcoes: document.getElementById('quiz-options'),
         atual: document.getElementById('quiz-current'),
         total: document.getElementById('quiz-total'),
-        barra: document.getElementById('quiz-progress-fill'),
+        barra: document.getElementById('quiz-progresso-cheio'),
         feedback: document.getElementById('quiz-feedback'),
         botaoProxima: document.getElementById('quiz-next'),
-        resultado: document.getElementById('quiz-result'),
-        resultadoTitulo: document.getElementById('quiz-result-title'),
-        resultadoTexto: document.getElementById('quiz-result-text'),
+        resultado: document.getElementById('quiz-resultado'),
+        resultadoTitulo: document.getElementById('quiz-resultado-title'),
+        resultadoTexto: document.getElementById('quiz-resultado-text'),
         botaoReiniciar: document.getElementById('quiz-restart')
     };
 }
