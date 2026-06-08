@@ -387,3 +387,50 @@ function initSlideshow() {
             iniciarAutoplay();
         });
    });
+
+   slideshow.addEventListener('mouseenter', pararAutoplay);
+    slideshow.addEventListener('mouseleave', iniciarAutoplay);
+
+    iniciarAutoplay();
+}
+
+function initLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImagem = document.getElementById('lightbox-imagem');
+    const botaoFechar = document.getElementById('lightbox-fechar');
+    const slides = document.querySelectorAll('#hero-slideshow .slide');
+
+    if (!lightbox || !slides.length) return;
+
+    function abrirLightbox(imagem) {
+        lightboxImagem.src = imagem.src;
+        lightboxImagem.alt = imagem.alt;
+        lightbox.classList.add('is-aberta');
+    }
+
+    function fecharLightbox() {
+        lightbox.classList.remove('is-aberta');
+        lightboxImagem.src = '';
+    }
+
+    slides.forEach(slide => {
+        slide.addEventListener('click', () => abrirLightbox(slide));
+    });
+
+    botaoFechar.addEventListener('click', fecharLightbox);
+    lightboxImagem.addEventListener('click', fecharLightbox);
+
+    lightbox.addEventListener('click', (evento) => {
+        if (evento.target === lightbox) fecharLightbox();
+    });
+
+    document.addEventListener('keydown', (evento) => {
+        if (evento.key === 'Escape' && lightbox.classList.contains('is-aberta')) {
+            fecharLightbox();
+        }
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', initSlideshow);
+document.addEventListener('DOMContentLoaded', initLightbox);
