@@ -326,3 +326,64 @@ form.addEventListener('submit', (evento) => {
 document.addEventListener('DOMContentLoaded', initTheme);
 document.addEventListener('DOMContentLoaded', initQuiz);
 document.addEventListener('DOMContentLoaded', initContatoForm);
+
+const SLIDE_INTERVALO = 5000;
+
+function initSlideshow() {
+    const slideshow = document.getElementById('hero-slideshow');
+    if (!slideshow) return;
+
+    const slides = slideshow.querySelectorAll('.slide');
+    const dots = slideshow.querySelectorAll('.slide-ponto');
+    const botaoAnterior = document.getElementById('slide-esq');
+    const botaoProximo = document.getElementById('slide-dir');
+
+    let indiceAtual = 0;
+    let temporizador = null;
+
+    function irParaSlide(indice) {
+        slides[indiceAtual].classList.remove('primeiro');
+        dots[indiceAtual].classList.remove('primeiro');
+
+        indiceAtual = (indice + slides.length) % slides.length;
+
+        slides[indiceAtual].classList.add('primeiro');
+        dots[indiceAtual].classList.add('primeiro');
+    }
+
+    function proximoSlide() {
+        irParaSlide(indiceAtual + 1);
+    }
+
+    function slideAnterior() {
+        irParaSlide(indiceAtual - 1);
+    }
+
+    function iniciarAutoplay() {
+        pararAutoplay();
+        temporizador = setInterval(proximoSlide, SLIDE_INTERVALO);
+    }
+
+    function pararAutoplay() {
+        if (temporizador) {
+            clearInterval(temporizador);
+            temporizador = null;
+        }
+    }
+
+    botaoProximo.addEventListener('click', () => {
+        proximoSlide();
+        iniciarAutoplay();
+    });
+
+    botaoAnterior.addEventListener('click', () => {
+        slideAnterior();
+        iniciarAutoplay();
+    });
+
+    dots.forEach((dot, indice) => {
+        dot.addEventListener('click', () => {
+            irParaSlide(indice);
+            iniciarAutoplay();
+        });
+   });
