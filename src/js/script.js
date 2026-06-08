@@ -295,7 +295,34 @@ function initContatoForm() {
             }
         });
     });
+    const sucesso = document.getElementById('form-sucesso');
+
+form.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    sucesso.hidden = true;
+
+    let formularioValido = true;
+    let primeiroInvalido = null;
+
+    campos.forEach(campo => {
+        const valido = validarCampo(campo);
+        if (!valido) {
+            formularioValido = false;
+            if (!primeiroInvalido) primeiroInvalido = campo.input;
+        }
+    });
+
+    if (!formularioValido) {
+        primeiroInvalido.focus();
+        return;
+    }
+
+    sucesso.hidden = false;
+    form.reset();
+    campos.forEach(campo => campo.input.classList.remove('invalido'));
+});
 }
 
 document.addEventListener('DOMContentLoaded', initTheme);
 document.addEventListener('DOMContentLoaded', initQuiz);
+document.addEventListener('DOMContentLoaded', initContatoForm);
