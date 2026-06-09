@@ -323,10 +323,6 @@ form.addEventListener('submit', (evento) => {
 });
 }
 
-document.addEventListener('DOMContentLoaded', initTheme);
-document.addEventListener('DOMContentLoaded', initQuiz);
-document.addEventListener('DOMContentLoaded', initContatoForm);
-
 const SLIDE_INTERVALO = 5000;
 
 function initSlideshow() {
@@ -386,9 +382,9 @@ function initSlideshow() {
             irParaSlide(indice);
             iniciarAutoplay();
         });
-   });
+    });
 
-   slideshow.addEventListener('mouseenter', pararAutoplay);
+    slideshow.addEventListener('mouseenter', pararAutoplay);
     slideshow.addEventListener('mouseleave', iniciarAutoplay);
 
     iniciarAutoplay();
@@ -431,6 +427,8 @@ function initLightbox() {
     });
 }
 
-
+document.addEventListener('DOMContentLoaded', initTheme);
+document.addEventListener('DOMContentLoaded', initQuiz);
+document.addEventListener('DOMContentLoaded', initContatoForm);
 document.addEventListener('DOMContentLoaded', initSlideshow);
 document.addEventListener('DOMContentLoaded', initLightbox);

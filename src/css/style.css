@@ -122,6 +122,12 @@
 .imagem-hero {
     width: 100%;
     min-width: 0;
+    position: relative;
+}
+
+.imagem-hero img {
+    width: 100%;
+    height: auto;
 }
 
 .slideshow {
@@ -166,90 +172,86 @@
 }
 
 .slide-ponto.primeiro {
-    background-color: var(--neutral);
+    background-color: var(--secondary);
     transform: scale(1.2);
 }
 
- .slide-controles {
-     display: flex;
-     justify-content: center;
-     gap: 16px;
-     margin-top: 16px;
- }
- 
- .slide-seta {
-     width: 40px;
-     height: 40px;
-     border: 1px solid var(--neutral-border);
-     border-radius: 50%;
-     background-color: var(--neutral-card);
-     color: var(--primary);
-     font-size: 22px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     cursor: pointer;
-     transition: background var(--t-rapida), color var(--t-rapida), border-color var(--t-rapida);
- }
- 
- .slide-seta:hover {
-     background-color: var(--secondary);
-     border-color: var(--secondary);
-     color: var(--neutral);
- }
- 
- .lightbox {
-     position: fixed;
-     inset: 0;
-     z-index: 100;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     background-color: rgba(0, 0, 0, 0.85);
-     opacity: 0;
-     visibility: hidden;
-     transition: opacity var(--t-base), visibility var(--t-base);
- }
- 
- .lightbox.is-aberta {
-     opacity: 1;
-     visibility: visible;
- }
- 
- .lightbox-imagem {
-     max-width: 90vw;
-     max-height: 85vh;
-     border-radius: var(--radius-menor);
-     box-shadow: var(--shadow-grande);
-     cursor: zoom-out;
- }
- 
- .lightbox-fechar {
-     position: absolute;
-     top: 24px;
-     right: 24px;
-     width: 44px;
-     height: 44px;
-     border: none;
-     border-radius: 50%;
-     background-color: rgba(255, 255, 255, 0.15);
-     color: var(--neutral);
-     font-size: 26px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     cursor: pointer;
-     transition: background var(--t-rapida);
- }
- 
- .lightbox-fechar:hover {
-     background-color: rgba(255, 255, 255, 0.3);
- }
-
-.imagem-hero img {
-    width: 100%;
-    height: auto;
+.slide-controles {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
 }
+
+.slide-seta {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--neutral-border);
+    border-radius: 50%;
+    background-color: var(--neutral-card);
+    color: var(--primary);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--t-rapida), color var(--t-rapida), border-color var(--t-rapida);
+}
+
+.slide-seta:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--neutral);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--t-base), visibility var(--t-base);
+}
+
+.lightbox.is-aberta {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-imagem {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: var(--radius-menor);
+    box-shadow: var(--shadow-grande);
+    cursor: zoom-out;
+}
+
+.lightbox-fechar {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--neutral);
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--t-rapida);
+}
+
+.lightbox-fechar:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 .problem {
     background-color: var(--background);
