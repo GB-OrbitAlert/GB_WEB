@@ -145,10 +145,12 @@
     opacity: 0;
     cursor: zoom-in;
     transition: opacity var(--t-base);
+    pointer-events: none;
 }
 
 .slideshow .slide.primeiro {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .slide-pontos {
