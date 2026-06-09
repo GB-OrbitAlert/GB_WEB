@@ -170,3 +170,5 @@ Faça uma imagem mostrando as características do projeto:
 <img src="src/img/imagem3.png"> <!--imagem3.png-->
 
 -- A IMAGEM 1 JÁ ESTAVA NO PROJETO DE FRONT -- 
+
+-- O ARQUIVO CITADO NA PERGUNTA 2 SE TRATA DE UM ARQUIVO QUE FIZEMOS CONTENDO TODAS AS INFORMAÇÕES DO PROJETO --
