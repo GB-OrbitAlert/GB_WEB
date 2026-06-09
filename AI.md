@@ -148,7 +148,7 @@ d) Agricultores do agronegócio
 -----------------------------------------------------------------------------------
 
 ## 2) PERGUNTA
-Através desse arquivo, faça duas imagens sobre o tema e mande apenas as imagens aqui. Troque os arduinos por ESP-32, troque tambem o display lcd 16x2 por um display tft st7789v
+Através desse arquivo, faça duas imagens sobre o tema e mande apenas as imagens aqui. Troque os arduinos uno por arduinos nano, troque tambem o display lcd 16x2 por um display tft st7789v
 
 
 ## RESPOSTA
